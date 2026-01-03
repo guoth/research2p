@@ -293,21 +293,11 @@
     calculateSum(shouldInputs, document.getElementById('sum-should'));
 
     // 反应时记录
-    var pageTimeElapsed = 0;
-    var pageTimerID = -1;
-
-    function pageTimer() {
-        pageTimeElapsed += 100;
-    }
-
-    window.onload = function () {
-        if (pageTimerID == -1) {
-            pageTimerID = setInterval(pageTimer, 100);
-        }
-    };
+    var pageLoadTime = Date.now();
 
     document.getElementById("btn-next").onclick = function () {
-        document.getElementById("estimate_reaction_time").value = pageTimeElapsed;
+        var submitTime = Date.now();
+        document.getElementById("estimate_reaction_time").value = (submitTime - pageLoadTime) / 1000;
     };
 </script>
 {{ endblock }}
