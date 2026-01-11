@@ -4,7 +4,7 @@ from os import environ
 SESSION_CONFIGS = [
     dict(
         name='public_goods_corrupt_punish',
-        display_name="公共品博弈实验（行贿惩罚2）",
+        display_name="research2p",
         app_sequence=['public_goods_corrupt_punish'],
         num_demo_participants=4,
     ),
@@ -18,7 +18,7 @@ SESSION_CONFIGS = [
 SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00, 
     participation_fee=3.00,  # 固定参与费3元
-    doc="公共品博弈实验"
+    doc="research2p"
 )
 
 PARTICIPANT_FIELDS = []
@@ -49,7 +49,7 @@ ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
 DEMO_PAGE_INTRO_HTML = """
-欢迎参加公共品博弈实验！
+欢迎参加实验！
 """
 
 
